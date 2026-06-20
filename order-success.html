@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Order Confirmed – Shila Vive</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f5ef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.08);
+    }
+    .checkmark {
+      width: 72px;
+      height: 72px;
+      background: #e8f5e9;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 36px;
+    }
+    h1 { font-size: 26px; color: #1a1a1a; margin-bottom: 10px; }
+    p.sub { color: #666; font-size: 15px; margin-bottom: 28px; line-height: 1.6; }
+    .order-id {
+      background: #f5f0e8;
+      border-radius: 8px;
+      padding: 14px 20px;
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 32px;
+      word-break: break-all;
+    }
+    .order-id span { font-weight: 600; color: #444; }
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      background: #c8a96e;
+      color: #fff;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #b3924f; }
+    .logo { margin-top: 36px; font-size: 12px; color: #bbb; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="checkmark">✓</div>
+    <h1>Order Confirmed!</h1>
+    <p class="sub">Thank you for your purchase. Your Pure Himalayan Shilajit is on its way. You'll receive a confirmation email shortly.</p>
+    <div class="order-id" id="order-display" style="display:none;">
+      Order ID: <span id="order-id-text"></span>
+    </div>
+    <a href="/product/pure-himalayan-shilajit-100-natural-resin/" class="btn">Continue Shopping</a>
+    <div class="logo">Shila Vive — Pure Himalayan Shilajit</div>
+  </div>
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var orderId = params.get("order");
+    if (orderId) {
+      document.getElementById("order-id-text").innerText = orderId;
+      document.getElementById("order-display").style.display = "block";
+    }
+  </script>
+</body>
+</html>
