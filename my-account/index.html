@@ -330,9 +330,9 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 		<h2 class="wd-login-title">Login</h2>
 
-					<form method="post" class="login woocommerce-form woocommerce-form-login
-						" action="https://shila-vive.com/my-account/?action=login" 			>
-
+					
+					<form method="get" class="login woocommerce-form woocommerce-form-login
+						action="/my-account/dashboard/" 			>
 				
 				
 				<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide form-row-username">
@@ -366,8 +366,8 @@ var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/
 
 		<h2 class="wd-login-title">Register</h2>
 
-		<form method="post" action="https://shila-vive.com/my-account/?action=register" class="woocommerce-form woocommerce-form-register register"  >
-
+		
+		<form method="get" action="/my-account/dashboard/" class="woocommerce-form woocommerce-form-register register"  >
 			
 			
 			<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">
@@ -977,4 +977,13 @@ var wc_cart_fragments_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_u
 </html>
 
 
-<!-- Page uncached by LiteSpeed Cache 7.8.1 on 2026-06-16 12:39:58 -->
+<!-- Page uncached by LiteSpeed Cache 7.8.1 on 2026-06-16 12:39:58
+	
+
+	// method="get" class="login woocommerce-form woocommerce-form-login
+					// " action="https://shila-vive.com/my-account/?action=login" 			
+
+					method="get"
+
+	 method="get" action="https://shila-vive.com/my-account/?action=register" class="woocommerce-form woocommerce-form-register register"  
+	-->
